@@ -1,0 +1,17 @@
+{% load static %}
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+{% endblock %}
+<section class="main-header">
+    {% include 'landing/inc/_nav.html' %}
+    <div class="main-header-text text-center">
+        <h3>We are best and creative agency</h3>
+        <h4>We turn creative ideas into your business.</h4>
+        <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum ese
+            terds.</p>
+        <div class="main-header-button text-center">
+            <button type="button" class="btn btn-pink rounded-pill"><a href="#">Read more</a></button>
+            <button type="button" class="btn btn-violet rounded-pill"><a href="#">Contact</a></button>
+        </div>
+    </div>
+</section>

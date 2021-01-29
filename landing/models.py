@@ -25,4 +25,4 @@ class Landing(models.Model):
     is_published = models.BooleanField(default=False)
 
     def __str__(self):
-        return self
+        return self.header_title_1

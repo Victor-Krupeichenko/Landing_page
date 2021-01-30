@@ -27,7 +27,7 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="Django" role="tabpanel"
                              aria-labelledby="Django-tab">
-                            <p>{{ item.django_content }}</p>
+                            <p class="content-item">{{ item.django_content }}</p>
                             <p><a href="#" class="btn btn-shadow btn-pink">Read more</a></p>
                             {% if item.django_img %}
                                 <a href="#"><img src="{{ item.django_img.url }}" alt=""></a>
@@ -36,7 +36,7 @@
                             {% endif %}
                         </div>
                         <div class="tab-pane fade" id="Bootstrap" role="tabpanel" aria-labelledby="Bootstrap-tab">
-                            <p>{{ item.bootstrap_content }}</p>
+                            <p class="content-item">{{ item.bootstrap_content }}</p>
                             <p><a href="#" class="btn btn-shadow btn-pink">Read more</a></p>
                             {% if item.bootstrap_img %}
                                 <a href="#"><img src="{{ item.bootstrap_img.url }}" alt=""></a>
@@ -45,7 +45,7 @@
                             {% endif %}
                         </div>
                         <div class="tab-pane fade" id="CSS" role="tabpanel" aria-labelledby="CSS-tab">
-                            <p>{{ item.css_content }}</p>
+                            <p class="content-item">{{ item.css_content }}</p>
                             <p><a href="#" class="btn btn-shadow btn-pink">Read more</a></p>
                             {% if item.css_img %}
                                 <a href="#"><img src="{{ item.css_img.url }}" alt=""></a>

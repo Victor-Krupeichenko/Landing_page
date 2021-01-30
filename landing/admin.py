@@ -30,6 +30,15 @@ class LandingAdmin(admin.ModelAdmin):
         ('Настройки attainment (низ второго экрана) - заполнение контента для CSS (правый блок)', {
             'fields': ('attainment_css_num', 'attainment_css_title', 'attainment_css_content')
         }),
+        ('Опубликовать', {
+            'fields': ('is_published', ),
+            'description': 'Чтобы опубликовать второй вариант заполнения - НЕОБХОДИМО СНЯТЬ ОПУБЛИКОВАНО С '
+                           'ПРЕДЫДУЩЕГО ВАРИАНТА'
+
+        }),
 
     )
+
+
 admin.site.register(Landing, LandingAdmin)
+# TODO скрыть с помощью CSS поле is_published - опубликовано

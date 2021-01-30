@@ -45,12 +45,14 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, .35);
 }
 
-.section-inspire .tab-content p {
+.section-inspire .tab-content .content-item {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: #1d1d1d;
     margin-bottom: 25px;
     max-width: 700px;
+    min-height: 87px;
+    margin-left: 15px;
 }
 
 .section-inspire .tab-content .btn-pink {
@@ -125,7 +127,7 @@
 
 .progress-item:hover {
     background-color: rgba(64, 40, 106, .5);
-    transform: scale(1);
+    transform: scale(.96);
 }
 
 .progress-item a {

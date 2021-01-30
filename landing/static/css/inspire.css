@@ -2,6 +2,9 @@
 /*    border: 1px solid #fb0456;*/
 /*}*/
 
+.section-inspire{
+    padding-top: 50px;
+}
 .section-inspire {
     background: url("../images/World Map.png") no-repeat center,
     url("../images/backgraund inspire.png") no-repeat bottom;
@@ -66,7 +69,7 @@
     box-shadow: 0 10px 0 rgba(255, 89, 144, .7);
     transition: all .3s;
     margin-left: 25px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .section-inspire .tab-content .btn-pink:hover {
@@ -89,12 +92,12 @@
     }
 }
 
-
+.design{
+    margin-top: 20px;
+}
 .design img {
-    margin-top: 10px;
     height: 75px;
     width: 68px;
-
 }
 
 .design .num {
@@ -117,17 +120,19 @@
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+
 }
 
 .progress-item {
-    margin-top: -2.8%;
+    margin-top: -5%;
     transition: all .3s;
-    transform: scale(.7);
+    transform: scale(.8);
+    margin-bottom: 25px;
 }
 
 .progress-item:hover {
     background-color: rgba(64, 40, 106, .5);
-    transform: scale(.96);
+    transform: scale(1.15);
 }
 
 .progress-item a {

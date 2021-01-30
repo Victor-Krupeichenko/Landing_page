@@ -1,0 +1,51 @@
+{% load static %}
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
+    <link rel="stylesheet" href="{% static 'css/crm.css' %}">
+    <script src="{% static 'js/plyr/plyr.js' %}"></script>
+{% endblock %}
+
+
+
+<section class="section-crm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 crm text-left">
+                <h3>We are best and creative agency</h3>
+                <h4>We turn creative ideas into your business.</h4>
+                <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum
+                    ese terds. Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus
+                    lorem ipsum ese terds.</p>
+                <div class="row">
+                    <div class="col-md-6 crm">
+                        <img src="../static/images/crmDjango.png" alt="">
+                        <h5>Graphic Design</h5>
+                        <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem
+                            ipsum ese terds.</p>
+                        <p><a href="#" class="btn btn-pink">Read more</a></p>
+                    </div>
+                    <div class="col-md-6 crm">
+                        <img src="../static/images/crmProtection.png" alt="">
+                        <h5>Graphic Design</h5>
+                        <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem
+                            ipsum ese terds.</p>
+                        <p><a href="#" class="btn btn-pink">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 video-block">
+                <div class="plyr__video-embed js-player" id="player">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Wgl-d1k_Kq4" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="plyr__video-embed js-player" id="player" onclick="players[1].play(click.pause())">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1sHNGNjdYg8" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p))</script>

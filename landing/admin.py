@@ -36,6 +36,22 @@ class LandingAdmin(admin.ModelAdmin):
         ('Настройки attainment (низ второго экрана) - заполнение контента для CSS (правый блок)', {
             'fields': ('attainment_css_num', 'attainment_css_title', 'attainment_css_content')
         }),
+        ('Настройки lets(третий экран)', {
+            'fields': ('lets_title_1', 'lets_title_2', 'lets_content')
+        }),
+        ('Настройка секкции CRM (вторая половина третьего экрана)',{
+            'fields': ('crm_title_1', 'crm_title_2', 'crm_content')
+        }),
+        ('Настройка секции CRM (колонки) - первая полонка', {
+            'fields': ('crm_section_1', 'crm_section_content')
+        }),
+        ('Настройка секции CRM (колонки) - вторя полонка', {
+            'fields': ('crm_section_2', 'crm_section_2_content')
+        }),
+        ('Настройка секции CRM (блок видео)',{
+            'fields': ('crm_video_1', 'crm_video_2'),
+            'description': 'Сюда вставляются ссылки на видео с видио-хостинга YouTube'
+        }),
         ('Опубликовать', {
             'fields': ('is_published', ),
             'description': 'Чтобы опубликовать второй вариант заполнения - НЕОБХОДИМО СНЯТЬ ОПУБЛИКОВАНО С '
@@ -44,6 +60,5 @@ class LandingAdmin(admin.ModelAdmin):
         }),
 
     )
-
 
 admin.site.register(Landing, LandingAdmin)

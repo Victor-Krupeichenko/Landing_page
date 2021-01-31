@@ -5,46 +5,39 @@
     <script src="{% static 'js/plyr/plyr.js' %}"></script>
 {% endblock %}
 
-
-
 <section class="section-crm">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 crm text-left">
-                <h3>We are best and creative agency</h3>
-                <h4>We turn creative ideas into your business.</h4>
-                <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum
-                    ese terds. Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus
-                    lorem ipsum ese terds.</p>
-                <div class="row">
-                    <div class="col-md-6 crm">
-                        <img src="../static/images/crmDjango.png" alt="">
-                        <h5>Graphic Design</h5>
-                        <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem
-                            ipsum ese terds.</p>
-                        <p><a href="#" class="btn btn-pink">Read more</a></p>
+                {% for item in object_list %}
+                    <h3>{{ item.crm_title_1 }}</h3>
+                    <h4>{{ item.crm_title_2 }}</h4>
+                    <p class="crm-content">{{ item.crm_content }}</p>
+                    <div class="row">
+                        <div class="col-md-6 crm-left">
+                            <img src="../static/images/crmDjango.png" alt="">
+                            <h5>{{ item.crm_section_1 }}</h5>
+                            <p class="crm-col">{{ item.crm_section_content }}</p>
+                            <p><a href="#" class="btn btn-pink">Read more</a></p>
+                        </div>
+                        <div class="col-md-6 crm-right">
+                            <img src="../static/images/crmProtection.png" alt="">
+                            <h5>{{ item.crm_section_2 }}</h5>
+                            <p class="crm-col">{{ item.crm_section_2_content }}</p>
+                            <p><a href="#" class="btn btn-pink">Read more</a></p>
+                        </div>
                     </div>
-                    <div class="col-md-6 crm">
-                        <img src="../static/images/crmProtection.png" alt="">
-                        <h5>Graphic Design</h5>
-                        <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem
-                            ipsum ese terds.</p>
-                        <p><a href="#" class="btn btn-pink">Read more</a></p>
                     </div>
+                    <div class="col-lg-5 video-block">
+                    <div class="plyr__video-embed js-player" id="player">
+                        {{ item.crm_video_1|safe }}
+                    </div>
+                    <div class="plyr__video-embed js-player two-player" id="player"
+                         onclick="players[1].play(click.pause())">
+                        {{ item.crm_video_2|safe }}
+                    </div>
+                {% endfor %}
                 </div>
-            </div>
-            <div class="col-lg-5 video-block">
-                <div class="plyr__video-embed js-player" id="player">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Wgl-d1k_Kq4" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-                <div class="plyr__video-embed js-player" id="player" onclick="players[1].play(click.pause())">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1sHNGNjdYg8" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
         </div>
     </div>
 </section>

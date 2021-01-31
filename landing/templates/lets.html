@@ -7,10 +7,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Let's Grow Together</h3>
-                <h4>We turn creative ideas into your business.</h4>
-                <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum
-                    ese terds. Lorem ipsum dolor sit am et, consec tetur adipi scing elit. </p>
+                {% for item in object_list %}
+                <h3>{{ item.lets_title_1 }}</h3>
+                <h4>{{ item.lets_title_2 }}</h4>
+                <p>{{ item.lets_content }}</p>
+                {% endfor %}
                 <p><a href="#" class="btn btn-pink">Read more</a></p>
             </div>
         </div>

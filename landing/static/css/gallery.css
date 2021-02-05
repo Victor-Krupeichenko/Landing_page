@@ -36,12 +36,11 @@
 }
 .section-gallery .gallery-item img{
     width: 102.6%;
-
     margin-bottom: 15px;
     transition: all .3s;
 }
 
 .section-gallery .gallery-item img:hover{
     transform: scale(1.1);
-    box-shadow: 0 10px 16px 10px rgba(0, 0 , 0, .35);
+    box-shadow: 0 14px 30px -15px rgba(0, 0 , 0, .75);
 }

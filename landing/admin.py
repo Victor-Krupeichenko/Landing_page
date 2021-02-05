@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import Landing
+from .models import *
 from django.forms import TextInput, Textarea
 from django.db import models
 
 
+@admin.register(Landing)
 class LandingAdmin(admin.ModelAdmin):
     list_display = ['header_title_1', 'is_published']
     list_editable = ['is_published']
@@ -39,7 +40,7 @@ class LandingAdmin(admin.ModelAdmin):
         ('Настройки lets(третий экран)', {
             'fields': ('lets_title_1', 'lets_title_2', 'lets_content')
         }),
-        ('Настройка секкции CRM (вторая половина третьего экрана)',{
+        ('Настройка секкции CRM (вторая половина третьего экрана)', {
             'fields': ('crm_title_1', 'crm_title_2', 'crm_content')
         }),
         ('Настройка секции CRM (колонки) - первая полонка', {
@@ -48,17 +49,33 @@ class LandingAdmin(admin.ModelAdmin):
         ('Настройка секции CRM (колонки) - вторя полонка', {
             'fields': ('crm_section_2', 'crm_section_2_content')
         }),
-        ('Настройка секции CRM (блок видео)',{
+        ('Настройка секции CRM (блок видео)', {
             'fields': ('crm_video_1', 'crm_video_2'),
             'description': 'Сюда вставляются ссылки на видео с видио-хостинга YouTube'
         }),
+        ('Настройка  Галереи - Текстовая часть', {
+            'fields': ('gallery_title', 'gallery_content'),
+        }),
+        ('Настройка  Галереи -> раздел Django', {
+            'fields': ('img_1_dj', 'img_2_dj', 'img_3_dj', 'img_4_dj', 'img_5_dj', 'img_6_dj', 'img_7_dj',
+                       'img_8_dj', 'img_9_dj'),
+            'classes': ['collapse']
+        }),
+        ('Настройка  Галереи -> раздел Bootstrap', {
+            'fields': ('img_1_boots', 'img_2_boots', 'img_3_boots', 'img_4_boots', 'img_5_boots', 'img_6_boots',
+                       'img_7_boots', 'img_8_boots', 'img_9_boots'),
+            'classes': ['collapse']
+        }),
+        ('Настройка  Галереи -> раздел CSS', {
+            'fields': ('img_1_css', 'img_2_css', 'img_3_css', 'img_4_css', 'img_5_css', 'img_6_css', 'img_7_css',
+                       'img_8_css', 'img_9_css'),
+            'classes': ['collapse']
+        }),
         ('Опубликовать', {
-            'fields': ('is_published', ),
+            'fields': ('is_published',),
             'description': 'Чтобы опубликовать второй вариант заполнения - НЕОБХОДИМО СНЯТЬ ОПУБЛИКОВАНО С '
                            'ПРЕДЫДУЩЕГО ВАРИАНТА',
             'classes': ['collapse']
         }),
 
     )
-
-admin.site.register(Landing, LandingAdmin)

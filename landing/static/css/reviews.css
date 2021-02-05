@@ -62,3 +62,24 @@
     margin-top: 10%;
     height: 97%;
 }
+
+.section-reviews .btn-reviews-one{
+    margin-left: 39%;
+    margin-right: 5%;
+}
+.section-reviews .btn{
+    margin-top: .5%;
+    margin-bottom: .5%;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f42267;
+    border-radius: 25px;
+    padding: 10px 15px;
+    box-shadow: 0 5px 16px #f42267;
+    transition: all .3s;
+}
+.section-reviews .btn:hover{
+    transform: scale(.8);
+    box-shadow: 0 2.5px 16px #f21359;
+}

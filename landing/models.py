@@ -44,6 +44,35 @@ class Landing(models.Model):
                                    help_text='Это поле необязательно к заполнению')
     crm_video_2 = models.TextField(verbose_name='Видео', blank=True,
                                    help_text='Это поле необязательно к заполнению')
+    gallery_title = models.CharField(max_length=20, null=True)
+    gallery_content = models.TextField(max_length=280, null=True)
+    img_1_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_2_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_3_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_4_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_5_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_6_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_7_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_8_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_9_dj = models.ImageField(upload_to='images/django/%m/%d/', blank=True, null=True)
+    img_1_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_2_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_3_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_4_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_5_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_6_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_7_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_8_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_9_boots = models.ImageField(upload_to='images/bootstrap/%m/%d/', blank=True, null=True)
+    img_1_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_2_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_3_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_4_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_5_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_6_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_7_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_8_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
+    img_9_css = models.ImageField(upload_to='images/css/%m/%d/', blank=True, null=True)
 
-    # def __str__(self):
-    #     return self.header_title_1
+    def __str__(self):
+        return self.header_title_1

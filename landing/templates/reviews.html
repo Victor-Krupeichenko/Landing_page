@@ -15,8 +15,10 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <div class="carousel-caption">
-                                <h3>Our Happy Client</h3>
-                                <h4>Testimonials</h4>
+                                {% for item in object_list %}
+                                    <h3>{{ item.title_reviews_1 }}</h3>
+                                    <h4>{{ item.title_reviews_2 }}</h4>
+                                {% endfor %}
                                 <blockquote class="blockquote">
                                     <p class="mb-0">
                                         Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut
@@ -43,4 +45,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+<a href="#" class="btn btn-reviews-one">Оставить отзыв</a>
+<a href="#" class="btn btn-reviews-two">Все отзывы</a>
 </section>

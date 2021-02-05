@@ -24,9 +24,9 @@
 .section-reviews .carousel-caption h4{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 30px;
     color: #ffffff;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 .section-reviews .blockquote p{
     font-family: 'Montserrat', sans-serif;
@@ -55,7 +55,7 @@
     font-style: italic;
     color: #f42267;
     position: absolute;
-    top: 22%;
+    top: 18%;
     left: -5%;
 }
 .section-reviews .images img{

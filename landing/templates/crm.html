@@ -2,7 +2,6 @@
 {% block extrastyle %}
     <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
     <link rel="stylesheet" href="{% static 'css/crm.css' %}">
-    <script src="{% static 'js/plyr/plyr.js' %}"></script>
 {% endblock %}
 
 <section class="section-crm">
@@ -41,4 +40,3 @@
         </div>
     </div>
 </section>
-<script>const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p))</script>
